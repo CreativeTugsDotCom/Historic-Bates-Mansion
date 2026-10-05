@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1C1A18">
     <title>Historic Bates Mansion | Downtown Tucson Event & Wedding Venue</title>
     <meta name="description" content="Tucson's premier historic downtown hacienda venue owned and operated by Jerry & Vanessa Holland. Hosting weddings, quinceañeras, galas, corporate & private events up to 250 guests with full planning, catering, bar & rental support.">
     <meta name="keywords" content="Historic Bates Mansion Tucson, Tucson wedding venue, Tucson event venue, downtown Tucson event space, Tucson quinceanera venue, Tucson event rentals, Mountain Oyster Club historic building">
@@ -62,6 +63,9 @@
         #main-header .header-logo-image { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center; border-radius: 9999px; flex: 0 0 auto; }
         #main-header .header-nav { min-width: 0; display: flex; align-items: center; justify-content: center; gap: clamp(10px, 1vw, 18px); flex-wrap: nowrap; white-space: nowrap; overflow: visible; }
         #main-header .header-nav a { flex: 0 0 auto; white-space: nowrap; line-height: 1; font-size: clamp(11px, 0.88vw, 13px); letter-spacing: 0.08em; font-weight: 600; }
+        @media (min-width: 1360px) {
+            #main-header .header-nav a { font-size: 12px; letter-spacing: 0.075em; }
+        }
         #main-header .header-actions { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: flex-end; gap: 8px; white-space: nowrap; }
         #main-header .header-action-btn { white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; line-height: 1; min-height: 42px; font-size: 11px; letter-spacing: 0.08em; font-weight: 600; }
         @media (max-width: 1350px) and (min-width: 1024px) {
@@ -71,6 +75,13 @@
             #main-header .header-nav a { font-size: 11px; letter-spacing: 0.06em; }
             #main-header .header-actions { gap: 7px; }
             #main-header .header-action-btn { padding-left: 10px; padding-right: 10px; font-size: 10px; }
+        }
+        @media (max-width: 1279px) and (min-width: 1024px) {
+            /* Project Pages remain fully static; switch to the mobile navigation before desktop items can collide. */
+            #main-header .header-inner { grid-template-columns: 64px minmax(0, 1fr) 48px; min-height: 76px; column-gap: 10px; }
+            #main-header .header-brand { width: 56px; height: 56px; min-width: 56px; flex-basis: 56px; }
+            #main-header .header-nav, #main-header .header-actions { display: none !important; }
+            #main-header #mobile-menu-btn { display: flex !important; align-items: center; justify-content: center; }
         }
         @media (max-width: 1023px) {
             #main-header .header-inner { display: flex; justify-content: space-between; min-height: 76px; }
@@ -256,3 +267,4 @@
     </script>
 </body>
 </html>
+
